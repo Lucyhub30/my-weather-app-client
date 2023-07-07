@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 
 function App() {
+  
   const [message, setMessage] = useState(""); 
   useEffect(() => {
     fetch("http://localhost:8000/weatherData")  
@@ -11,18 +12,23 @@ function App() {
       })
   }, []);
   
-
+  
+  
   return (
 
     //My app
     <div className="App">
 
-      <div className="MainContent">
-        <h1>Welcome to my weather station app!</h1>
-        <p> This is where the data from your weather station will be displayed.</p>
-        <pre>{JSON.stringify(message, null, 2)}</pre>
+      <div className="basicDisplay">
+        <h1>Your Weather Station</h1>
+        <p>App last updated...</p>
+        <div className="temp">25</div>
+        <div className="weatherCondition">Sunny</div>
       </div>
+      <pre>{JSON.stringify(message, null, 2)}</pre>
     </div>
+
+        
   );
 }
 
