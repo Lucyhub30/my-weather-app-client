@@ -1,0 +1,139 @@
+.App {
+    margin: 10px
+}
+
+.content{
+    display : grid;
+    grid-template-columns: 1fr 15fr;
+    grid-gap: 10px
+}
+.mainDisplay {
+    color:rgb(1, 0, 2);
+    background-color: rgb(246, 242, 242);
+    
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding-left: 10px;
+    
+
+}
+.mainDisplayContent {
+    text-align: center;
+}
+.settingsButton {
+    text-align: right;
+    font-size: 20px;
+    background-color: rgb(180, 178, 178);
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0px;
+    
+}
+.settings {
+    margin:0px;
+    padding: 10px;
+    background-color: rgb(246, 242, 242);
+
+}
+.homePage {
+    background-color: white;
+}
+
+.airQuality {
+    background-color:rgb(246, 242, 242);
+}
+
+.dataReadings {
+    background-color:rgb(246, 242, 242);
+}
+
+.temperature {
+    min-width: 200px;
+    font-size: 50px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    background-color: rgb(180, 178, 178);
+}
+
+.rightColumn {
+    margin:0
+}
+.weatherConditions {
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(180, 178, 178);
+    min-width: 150px;
+    margin: 10px;
+    
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 10px;
+}
+
+.weatherPredictions {
+    background-color:rgb(246, 242, 242);
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 300px;
+    margin-top:0px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+
+
+.myReadings {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+    
+}
+
+.airQuality {
+    padding:20px;
+}
+
+.dataReadings {
+    padding:20px;
+}
+
+.graph {
+    background-color: rgb(246, 242, 242);
+    padding: 20px;
+    margin-top: 10px;
+    height: 20%;
+
+}
+
+.additionalStuff{
+    margin-top: 10px;
+    background-color: rgb(246, 242, 242);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.otherReadings {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+}
+
+.menu {
+    background-color: rgb(180, 178, 178);
+    padding:1px;
+    margin-bottom:10px;
+    height: 127%;
+    
+}

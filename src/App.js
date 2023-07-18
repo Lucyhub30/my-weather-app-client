@@ -1,35 +1,22 @@
 // Includes react module
-import React, { useState, useEffect } from "react";
 
+//import component home
+import Home from './Home';
+import Menu from './Menu';
 function App() {
-  
-  const [message, setMessage] = useState(""); 
-  useEffect(() => {
-    fetch("http://localhost:8000/weatherData")  
-    .then(async (res) => { 
-        const data = await res.json();
-        setMessage(data);
-      })
-  }, []);
-  
-  
-  
+
+
   return (
 
     //My app
+    
     <div className="App">
-
-      <div className="basicDisplay">
-        <h1>Your Weather Station</h1>
-        <p>App last updated...</p>
-        <div className="temp">25</div>
-        <div className="weatherCondition">Sunny</div>
+      <div className="content">
+          <Menu/>
+          <Home/>
       </div>
-      <pre>{JSON.stringify(message, null, 2)}</pre>
-    </div>
-
-        
+    </div> 
   );
 }
 
-export default App
+export default App;
