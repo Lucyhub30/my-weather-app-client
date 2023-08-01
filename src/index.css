@@ -1,41 +1,159 @@
-.App {
+@media (min-width: 800px) {
+    .content{
+        display : grid;
+        grid-template-columns: 1fr 15fr;
+        grid-gap: 10px
+    }
+    
+    .weatherPredictions{
+        margin-top:0px;
+    }
+    .columns {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 10px;
+    }
+    .temperature{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .weatherConditions{
+        margin: auto;
+        max-width: 5000px;
+    }
+    .settingsButton{
+        margin-left: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 0px;
+    }
+    .mainDisplay{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .myReadings{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .otherReadings {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    
+    }
+}
+@media (max-width: 850px) and (min-width: 520px) {
+    .temperature {
+        max-width: 200px;
+        margin:auto;
+    }
+    .weatherConditions {
+        max-width: 200px;
+        
+        margin:auto;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+    .settingsButton {
+        margin-left: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 0px;
+        
+    }
+    .weatherPredictions{
+        margin-top: 0px;
+    }
+    .mainDisplay{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .myReadings {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .otherReadings {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    
+    }
+}
+
+@media (max-width: 520px) and (min-width: 360px) {
+    .mainDisplay{
+        padding-right:10px;
+    }
+    .myReadings{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .otherReadings {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    
+    }
+}
+
+@media (max-width:360px) {
+    .mainDisplay{
+        padding-right:10px;
+    }
+    .myReadings{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .otherReadings{
+        margin-top: 10px;
+        margin-bottom:10px;
+    }
+    .dataReadings{
+        margin-top: 10px;
+        margin-bottom:10px;
+    }
+    .airQuality{
+        margin-top: 10px;
+        margin-bottom:10px;
+    }
+    .additionalStuff{
+        margin-bottom:10px;
+    }
+}
+
+  .App {
     margin: 10px
 }
 
-.content{
-    display : grid;
-    grid-template-columns: 1fr 15fr;
-    grid-gap: 10px
-}
+
+
+
 .mainDisplay {
     color:rgb(1, 0, 2);
     background-color: rgb(246, 242, 242);
     
+    
     padding-bottom: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
     padding-left: 10px;
     
-
 }
 .mainDisplayContent {
     text-align: center;
 }
 .settingsButton {
-    text-align: right;
+    text-align: center;
     font-size: 20px;
     background-color: rgb(180, 178, 178);
-    margin: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 0px;
-    
 }
 .settings {
     margin:0px;
-    padding: 10px;
-    background-color: rgb(246, 242, 242);
+    padding-bottom: 10px;
 
 }
 .homePage {
@@ -55,8 +173,6 @@
     font-size: 50px;
     padding-top: 1px;
     padding-bottom: 1px;
-    margin-left: 5vw;
-    margin-right: 5vw;
     background-color: rgb(180, 178, 178);
 }
 
@@ -68,31 +184,22 @@
     font-size: 30px;
     background-color: rgb(180, 178, 178);
     min-width: 150px;
-    margin: 10px;
+    
     
 }
 
-.columns {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 10px;
-}
 
 .weatherPredictions {
     background-color:rgb(246, 242, 242);
     text-align: center;
     font-size: 30px;
     padding-bottom: 300px;
-    margin-top:0px;
     margin-bottom: 10px;
     padding-top: 20px;
 }
 
 
 .myReadings {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
     margin-top: 10px;
     text-align: center;
     
@@ -116,6 +223,7 @@
 
 .additionalStuff{
     margin-top: 10px;
+    margin-bottom: 10px;
     background-color: rgb(246, 242, 242);
     padding-left: 20px;
     padding-right: 20px;
@@ -123,17 +231,11 @@
     padding-bottom: 40px;
 }
 
-.otherReadings {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-
-}
 
 .menu {
     background-color: rgb(180, 178, 178);
     padding:1px;
     margin-bottom:10px;
-    height: 127%;
+    height: 124%;
     
 }

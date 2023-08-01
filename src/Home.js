@@ -4,7 +4,7 @@ import DataReading from './DataReadings';
 import WeatherPredictions from './WeatherPredictions';
 import Graph from './Graph';
 import AdditionalStuff from './AdditionalStuff';
-import Settings from './Settings';
+
 
 
 const Home = () => {
@@ -28,7 +28,7 @@ const Home = () => {
             </div>
 
             <div className="right column">
-                <Settings/>
+                
                 <WeatherPredictions /> 
                 <div className="otherReadings">
                     <DataReading/>
