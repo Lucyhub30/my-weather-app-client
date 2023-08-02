@@ -1,9 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './Homepage/App';
+import SettingsPage from './Settings/SettingsPage';
+import AboutPage from './AboutPage/AboutPage';
+import NotificationsPage from './NotificationsPage/NotificationsPage';
+import HelpPage from './HelpPage/HelpPage';
+import Menu from './Menu';
+
+import {
+  createBrowserRouter,
+  RouteProvider,
+  Router,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App/>
+  },
+  {
+    path: "about",
+    element: <AboutPage/>
+  },
+  {
+    path: "settings",
+    element: <SettingsPage/>
+  },
+  {
+    path: "notifications",
+    element: <NotificationsPage/>
+  },
+  {
+    path: "help",
+    element: <HelpPage/>
+  }
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <App/>
+  <div><Menu/><div className='content'><RouterProvider router={router}/></div></div>
+
 );

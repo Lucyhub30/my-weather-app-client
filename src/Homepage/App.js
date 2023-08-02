@@ -1,8 +1,9 @@
 // Includes react module
 
 //import component home
-import Home from './Home';
-import Menu from './Menu';
+import Home from "./Home";
+
+
 function App() {
 
 
@@ -11,10 +12,9 @@ function App() {
     //My app
     
     <div className="App">
-      <div className="content">
-          <Menu/>
-          <Home/>
-      </div>
+      
+      <Home/>
+      
     </div> 
   );
 }

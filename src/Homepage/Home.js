@@ -24,7 +24,7 @@ const Home = () => {
                 <Graph/>
                 <Graph/>
 
-                <AdditionalStuff/>
+                
             </div>
 
             <div className="right column">
@@ -39,6 +39,8 @@ const Home = () => {
             </div>
             
             </div>
+            <div className="additional"><AdditionalStuff/></div>
+            
             
         </div>
     );
