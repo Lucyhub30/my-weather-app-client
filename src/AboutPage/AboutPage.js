@@ -1,7 +1,11 @@
 const AboutPage = () => {
-    let connection_status = "CONNECTED";
+
+    //The values of these variables will change depending on the connection with the weather station
+    let connection_status = "SUCCESSFUL";
     let last_recieved = "22/22/2023 at 17:00"
     let activated = "01/01/2020"
+
+
     return(
         <div className="aboutPage">
             <div className="pageContent">
@@ -14,7 +18,7 @@ const AboutPage = () => {
                     <p>Weather station first activated - <b>{activated}</b></p>
                 </div>
                 <br/>
-                <p className="settingsLink">To change your weather station preferences, go to <a onClick={() => {window.location.pathname = "/settings"}}>settings</a></p>
+                <p className="PageLink">To change your weather station preferences, go to <a onClick={() => {window.location.pathname = "/settings"}}>settings</a></p>
                 <br/>
             </div>
         </div>

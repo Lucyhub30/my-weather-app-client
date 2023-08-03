@@ -3,7 +3,7 @@ import React from "react";
 //Importing the icons for menu
 import { BsFillHouseFill } from 'react-icons/bs'
 import { GiSettingsKnobs } from 'react-icons/gi'
-import { BsBellFill } from 'react-icons/bs'
+import { LuHistory } from 'react-icons/lu'
 import { BsFillQuestionCircleFill } from 'react-icons/bs'
 import { IoMdSettings } from 'react-icons/io'
 
@@ -26,10 +26,10 @@ export const MenuData = [
         cName: "menuIcon aboutIcon"
     },
     {
-        title: "Notifications",
-        icon: <BsBellFill />,
-        link: "/notifications",
-        cName: "menuIcon notificationsIcon"
+        title: "History",
+        icon: <LuHistory />,
+        link: "/history",
+        cName: "menuIcon historyIcon"
     },
     {
         title: "Help",

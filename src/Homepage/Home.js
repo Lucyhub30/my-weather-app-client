@@ -11,36 +11,36 @@ const Home = () => {
     
     return(
         <div className="homePage">
-            
-            <div className="columns">
-            <div className="leftcolumn">
-                <MainDisplay />
-                <div className="myReadings">
-                    <AirQuality/>
-                    <DataReading/>
-                    <DataReading/>
-                    <DataReading/>
-                </div>
-                <Graph/>
-                <Graph/>
+            <div className="pageContent">
+                <div className="columns">
+                    <div className="leftcolumn">
+                        <MainDisplay />
+                        <div className="myReadings">
+                            <AirQuality/>
+                            <DataReading/>
+                            <DataReading/>
+                            <DataReading/>
+                        </div>
+                        <Graph/>
+                        <Graph/>
+                        <AdditionalStuff/>
 
-                
-            </div>
+                        
+                    </div>
 
-            <div className="right column">
-                
-                <WeatherPredictions /> 
-                <div className="otherReadings">
-                    <DataReading/>
-                    <DataReading/>
-                    <DataReading/>
-                </div>
-                <Graph/>
-            </div>
+                    <div className="right column">
+                        
+                        <WeatherPredictions /> 
+                        <div className="otherReadings">
+                            <DataReading/>
+                            <DataReading/>
+                            <DataReading/>
+                        </div>
+                        <Graph/>
+                    </div>
             
+                </div>    
             </div>
-            <div className="additional"><AdditionalStuff/></div>
-            
             
         </div>
     );

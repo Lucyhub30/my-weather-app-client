@@ -4,7 +4,7 @@ import './index.css';
 import App from './Homepage/App';
 import SettingsPage from './Settings/SettingsPage';
 import AboutPage from './AboutPage/AboutPage';
-import NotificationsPage from './NotificationsPage/NotificationsPage';
+import HistoryPage from './HistoryPage/HistoryPage';
 import HelpPage from './HelpPage/HelpPage';
 import Menu from './Menu';
 
@@ -29,8 +29,8 @@ const router = createBrowserRouter([
     element: <SettingsPage/>
   },
   {
-    path: "notifications",
-    element: <NotificationsPage/>
+    path: "history",
+    element: <HistoryPage/>
   },
   {
     path: "help",
