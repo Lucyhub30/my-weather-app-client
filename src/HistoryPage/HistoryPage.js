@@ -2,17 +2,20 @@ import React, { useState, useEffect } from "react";
 
 
 const HistoryPage = () => {
-    
-    //Connects to backend
-    const [message, setMessage] = useState(""); 
-    useEffect(() => {
-        fetch("http://localhost:8000/weatherData")  
+    async function getData(){
+        await fetch("http://localhost:8000/weatherData")  
         .then(async (res) => { 
         const data = await res.json();
         setMessage(data);
       })
+    }
+    //Connects to backend
+    const [message, setMessage] = useState(""); 
+    useEffect(() => {
+        getData()
+        
     }, []);
-
+    
     return(
         <div className="historyPage">
             <div className="pageContent">
@@ -38,7 +41,7 @@ const HistoryPage = () => {
                         </div>
                     </div>
                     
-                    { message?.weatherData?.map((item) => {
+                    { message?.weatherData?.slice(0,50).map((item) => {
                         return (
                             <div className="weatherReadings">
                                 <div className="timestamp readings">
@@ -61,7 +64,7 @@ const HistoryPage = () => {
                                 </div>
                             </div>
                         )
-                    }) }
+                    })}
                 </div>
             </div>
         </div>
