@@ -1,9 +1,17 @@
 import MainDisplay from './MainDisplay';
 import AirQuality from './AirQuality';
-import DataReading from './DataReadings';
 import WeatherPredictions from './WeatherPredictions';
-import Graph from './Graph';
+import TempGraph from './TempGraph';
 import AdditionalStuff from './AdditionalStuff';
+import DustConc from './DustConc';
+import Humidity from './Humidity';
+import Pressure from './Pressure';
+import Altitude from './Altitude';
+import Sound from './Sound';
+import Light from './Light';
+import LightSoundChart from './LightSoundChart';
+import HumidityGraph from './HumidityGraph';
+import DustGraph from './DustGraph';
 
 
 
@@ -15,15 +23,23 @@ const Home = () => {
                 <div className="columns">
                     <div className="leftcolumn">
                         <MainDisplay />
+                        
                         <div className="myReadings">
                             <AirQuality/>
-                            <DataReading/>
-                            <DataReading/>
-                            <DataReading/>
+                            <DustConc/>
+                            <Humidity/>
+                            <Pressure/>
                         </div>
-                        <Graph/>
-                        <Graph/>
+                        
+                        
+                        <div className='graphColumns'>
+                        
+                        <TempGraph/>
+                        <HumidityGraph/>
+                        
+                        </div>
                         <AdditionalStuff/>
+                        
 
                         
                     </div>
@@ -31,12 +47,14 @@ const Home = () => {
                     <div className="right column">
                         
                         <WeatherPredictions /> 
+                        <DustGraph/>
                         <div className="otherReadings">
-                            <DataReading/>
-                            <DataReading/>
-                            <DataReading/>
+                            <Sound/>
+                            <Light/>
+                            <Altitude/>
                         </div>
-                        <Graph/>
+                        <LightSoundChart/>
+                        
                     </div>
             
                 </div>    

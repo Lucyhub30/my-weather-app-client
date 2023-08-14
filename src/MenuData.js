@@ -37,10 +37,4 @@ export const MenuData = [
         link: "/help",
         cName: "menuIcon helpIcon"
     },
-    {
-        title: "Settings",
-        icon: <IoMdSettings />,
-        link: "/settings",
-        cName: "menuIcon settingsIcon"
-    }
 ]

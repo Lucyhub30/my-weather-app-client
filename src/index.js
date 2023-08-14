@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './Homepage/App';
-import SettingsPage from './Settings/SettingsPage';
 import AboutPage from './AboutPage/AboutPage';
 import HistoryPage from './HistoryPage/HistoryPage';
 import HelpPage from './HelpPage/HelpPage';
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
   {
     path: "about",
     element: <AboutPage/>
-  },
-  {
-    path: "settings",
-    element: <SettingsPage/>
   },
   {
     path: "history",

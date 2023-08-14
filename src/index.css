@@ -1,5 +1,7 @@
-@media (min-width: 800px) {
-    
+@media (min-width: 1130px) {
+    .dataCircle{
+        height: 100%;
+    }
     .weatherPredictions{
         margin-top:0px;
     }
@@ -21,13 +23,9 @@
     .weatherConditions{
         margin: auto;
         max-width: 5000px;
+        border-radius: 30px;
     }
-    .settingsButton{
-        margin-left: auto;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: 0px;
-    }
+
     .mainDisplay{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -44,27 +42,58 @@
         grid-gap: 10px;
     
     }
+    .temperature{
+        max-width: 280px;
+    }
+    .graphData{
+        height: 300px;
+        width: 300px;
+    }
+    .lightSoundgraphData {
+        width: 400px;
+        height: 300px;
+    }
+    .humidityContent{
+        width: 300px;
+        height: 300px;
+    }
+    .dustContent{
+        width: 400px;
+        height: 300px;
+    }
+    .graphColumns {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .weather{
+        margin-top:10px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
 }
 
-@media (max-width: 850px) and (min-width: 520px) {
+@media (max-width: 1130px) and (min-width: 728px) {
+    .weather{
+        margin-top:10px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
     .temperature {
         max-width: 200px;
         margin:auto;
     }
     .weatherConditions {
         max-width: 200px;
-        
+        border-radius: 30px;
         margin:auto;
         padding-top: 1px;
         padding-bottom: 1px;
     }
-    .settingsButton {
-        margin-left: auto;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: 0px;
-        
-    }
+    
     .weatherPredictions{
         margin-top: 0px;
     }
@@ -84,9 +113,40 @@
         grid-gap: 10px;
     
     }
+    .temperature{
+        max-width: 280px;
+    }
+    .dataCircle{
+        height: 100%;
+    }
+    .weatherPredictions{
+        margin-top: 10px;
+    }
+    .graphData{
+        height: 300px;
+        width: 290px;
+    }
+    .lightSoundgraphData {
+        width: 600px;
+        height: 250px;
+    }
+    .humidityContent{
+        height: 300px;
+        width: 290px;
+    }
+    .dustContent{
+        width: 600px;
+        height: 400px;
+    }
+    .graphColumns {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    
 }
 
-@media (max-width: 520px) and (min-width: 360px) {
+@media (max-width: 728px) and (min-width: 501px) {
     .mainDisplay{
         padding-right:10px;
     }
@@ -101,18 +161,79 @@
         grid-gap: 10px;
     
     }
+    .dataCircle.lower{
+        height: 200px
+    }
+    .upper{
+        height: 100%;
+    }
+    .weatherPredictions{
+        margin-top: 10px;
+    }
+    .graphData{
+        height: 300px;
+        width: 400px;
+    }
+    .humidityContent{
+        width: 400px;
+        height: 250px;
+    }
+    .dustContent{
+        width: 400px;
+        height: 300px;
+    }
+    
+    .temperature{
+        width: 10px;
+    }
+    .weatherConditions{
+        width: 15px;
+        border-radius: 30px;
+    }
+    .weather{
+        margin-top:10px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .weatherConditions{
+        width: 15px;
+    }
+    .lightSoundgraphData {
+        width: 400px;
+        height: 250px;
+    }
+    
 }
 
-@media (max-width:360px) {
+@media (max-width:501px) {
+    .temperature{
+        width: 10px;
+    }
+    .weatherConditions{
+        width: 15px;
+        border-radius: 30px;
+    }
+    .graphData{
+        height: 300px;
+        width: 350px;
+    }
     .mainDisplay{
         padding-right:10px;
         padding-top:10px;
         
     }
-    .myReadings{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
+    .weather{
+        margin-top: 20px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .weatherPredictions{
+        margin-top: 10px;
+    }
+    .dataCircle{
+        margin-top: 10px;
     }
     .otherReadings{
         margin-top: 10px;
@@ -127,8 +248,18 @@
         margin-bottom:10px;
     }
     .additionalStuff{
+        
         margin-bottom:10px;
     }
+    .lightSoundgraphData {
+        width: 300px;
+        height: 300px;
+    }
+    .dustContent{
+        width: 300px;
+        height: 300px;
+    }
+    
 }
 
 body {
@@ -139,20 +270,12 @@ body {
 .mainDisplay {
     color:rgb(1, 0, 2);
     background-color: #bdd7f1;
-    
-    
     padding-bottom: 20px;
     padding-left: 10px;
     
 }
 .mainDisplayContent {
     text-align: center;
-}
-
-.settings {
-    margin:0px;
-    padding-bottom: 10px;
-
 }
 .homePage {
     background-color: white;
@@ -190,15 +313,14 @@ body {
     min-height: calc(100vh - 20px);
     background-color: rgb(221, 238, 251);
 }
-.settingsPage {
-    padding-top: 0px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    
-}
 .airQuality {
-    background-color: #f5f8f9;
+    background-color: #dcecf5;
+    padding-top:50px;
+    font-size: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .aboutTitle {
     text-align: center;
@@ -208,9 +330,9 @@ body {
     padding: 20px;
     background-color: #306193;
     color: white;
-    height: 200px;
+    height: auto;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
 }
 .aboutInfo {
     margin: 30px;
@@ -219,11 +341,16 @@ body {
     text-align: center;
     font-size: 20px;
 }
-.PageLink {
+.pageLink {
     text-align: center;
+    font-size: 20px;
 }
-.PageLink a {
+.pageLink a {
     color: rgb(74, 65, 65);
+    text-decoration: underline;
+}
+.aboutText.pageLink{
+    color:#f0f6fc;
     text-decoration: underline;
 }
 .historyText {
@@ -236,14 +363,61 @@ body {
 .dataReadings {
     background-color: #f5f8f9;
 }
+.dataCircle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f8f9;
+    
+    text-align: center;
+}
+.dataContainer {
+    background-color: #008599;
+    width:120px;
+    height:120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.humidity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.progressBarText{
+    font-size: 25px;
+}
 
+.dataVal {
+    background-color: #f5f8f9;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    
+}
+.timestampHome{
+    text-align: center;
+    font-size: 20px;
+}
 .temperature {
     min-width: 200px;
+    border-radius: 40px;
+    
     font-size: 50px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 30px;
+    padding-bottom:30px;
+    margin:auto;
     background-color: #306193;
     color:white;
+    text-align:center;
 
 }
 
@@ -257,11 +431,11 @@ body {
     min-width: 150px;
     color:white;
     
-    
-    
 }
 
-
+.dataText{
+    font-size: 15px;
+}
 .weatherPredictions {
     background-color: #8ab1da;
     text-align: center;
@@ -278,20 +452,25 @@ body {
     
 }
 
-.airQuality {
-    padding:20px;
-}
+
+
 
 .dataReadings {
     padding:20px;
 }
 
-.graph {
-    background-color: #f5f8f9;
+.tempGraph {
+    background-color: #f0f6fc;
     padding: 20px;
     margin-top: 10px;
-    height: 20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 
+.graphContent {
+    background-color: #f0f6fc;
 }
 
 .additionalStuff{
@@ -303,6 +482,7 @@ body {
     padding-right: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
+    height: 20%;
 }
 
 
@@ -348,17 +528,9 @@ ul {
     color: white;
     font-size: 40px;
 }
-.settingsIcon {
-    color: white;
-    font-size: 45px;
-    position: fixed;
-    bottom: 10px;
-    width: 80px
-}
 
-.menuIcon.settingsIcon svg {
-    margin-top: -3px;
-}
+
+
 
 .menuIcon {
     margin-top: 5px;
@@ -529,15 +701,32 @@ ul {
 .helpColumns{
     margin:5px;
 }
-.settingsPage{
-    text-align: center;
+
+
+
+.alternativeBack{
+    background-color: #dcecf5;
+}
+.lightSoundGraph{
+    margin-top: 10px;
+    background-color: #f5f8f9;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.settingsText{
-    font-size: 25px;
-    background-color: #8ab1da;
-    margin:10px;
-    padding:10px;
-    
-
+.humidityGraph{
+    background-color: #dcecf5;
+    margin-top: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.dustGraph{
+    background-color: white;
+    margin-top: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }

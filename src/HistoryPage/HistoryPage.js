@@ -2,24 +2,33 @@ import React, { useState, useEffect } from "react";
 
 
 const HistoryPage = () => {
-    async function getData(){
+    async function update(){
+        
         await fetch("http://localhost:8000/weatherData")  
         .then(async (res) => { 
         const data = await res.json();
         setMessage(data);
+        
       })
     }
     //Connects to backend
     const [message, setMessage] = useState(""); 
-    useEffect(() => {
-        getData()
+    
         
-    }, []);
+    useEffect(() => {
+        update()
+        const interval = setInterval(()=>{
+            update()
+        },30000)
+        return()=>clearInterval(interval)
+    }, [])
+        
+    
     
     return(
         <div className="historyPage">
             <div className="pageContent">
-                <h1 class="historyTitle">Weather History</h1>
+                <h1 className="historyTitle">Weather History</h1>
                 <div className="historyText">
                     <p className="PageLink">Welcome to Weather History! Here, you can find a log of all the data readings from your weather station. Want a more visual way of monitoring weather conditions? Check out the <a onClick={() => {window.location.pathname = "/"}}>main display</a>! </p>
                 </div>
@@ -41,9 +50,9 @@ const HistoryPage = () => {
                         </div>
                     </div>
                     
-                    { message?.weatherData?.slice(0,50).map((item) => {
+                    { message?.weatherData?.map((item, idx) => {
                         return (
-                            <div className="weatherReadings">
+                            <div key={idx} className="weatherReadings">
                                 <div className="timestamp readings">
                                     <div className="timestamp-container">
                                         <div>{new Date(item.timestamp*1000).toDateString()}</div>
