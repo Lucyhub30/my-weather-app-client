@@ -13,7 +13,7 @@
     }
     .helpColumns{
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 3fr 2fr;
         grid-gap: 0px;
     }
     .temperature{
@@ -50,7 +50,7 @@
         width: 300px;
     }
     .lightSoundgraphData {
-        width: 400px;
+        width: 360px;
         height: 300px;
     }
     .humidityContent{
@@ -58,7 +58,7 @@
         height: 300px;
     }
     .dustContent{
-        width: 400px;
+        width: 360px;
         height: 300px;
     }
     .graphColumns {
@@ -149,6 +149,7 @@
 @media (max-width: 728px) and (min-width: 501px) {
     .mainDisplay{
         padding-right:10px;
+        padding-top: 10px;
     }
     .myReadings{
         display: grid;
@@ -172,14 +173,14 @@
     }
     .graphData{
         height: 300px;
-        width: 400px;
+        width: 370px;
     }
     .humidityContent{
         width: 400px;
         height: 250px;
     }
     .dustContent{
-        width: 400px;
+        width: 370px;
         height: 300px;
     }
     
@@ -200,7 +201,7 @@
         width: 15px;
     }
     .lightSoundgraphData {
-        width: 400px;
+        width: 370px;
         height: 250px;
     }
     
@@ -334,6 +335,11 @@ body {
     text-align: center;
     font-size: 25px;
 }
+.aboutText a {
+    color: rgb(204, 204, 204);
+    text-decoration: underline;
+    font-size: 25px;
+}
 .aboutInfo {
     margin: 30px;
     padding:20px;
@@ -359,6 +365,11 @@ body {
     margin-right: 50px;
     padding:30px;
     font-size: 20px;
+    text-align: center;
+}
+.historyText a {
+    color: rgb(74, 65, 65);
+    text-decoration: underline;
 }
 .dataReadings {
     background-color: #f5f8f9;
@@ -368,6 +379,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #f5f8f9;
+    padding:px;
     
     text-align: center;
 }
@@ -482,7 +494,7 @@ body {
     padding-right: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
-    height: 20%;
+    height: 10%;
 }
 
 
@@ -576,7 +588,7 @@ ul {
     
     
 }
-@media (max-width:470px){
+@media (max-width:600px){
     .weatherReadings {
         margin-top:5px;
         margin-bottom: 5px;
@@ -597,7 +609,7 @@ ul {
     
 }
 
-@media (min-width: 470px) and (max-width: 1232px){
+@media (min-width: 600px) and (max-width: 1232px){
     .weatherReadings {
         display:grid;
         grid-template-columns: 1fr 4fr;
@@ -676,6 +688,7 @@ ul {
     text-align: center;
     margin:15px;
     margin-bottom:5px;
+    font-size: 20px;
 }
 .howToText{
     background-color: #bdd7f1;
@@ -688,7 +701,7 @@ ul {
     min-height: 77vh;
 }
 
-.setUpText{
+.setUpBack{
     background-color: #bdd7f1;
     padding:10px;
     text-align: center; 
@@ -729,4 +742,43 @@ ul {
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+}
+.aboutLog {
+    background-color: rgb(232, 251, 249);
+    padding: 2px;
+    margin-top: 5px;
+    margin-bottom:5px;
+    width: 400px;
+}
+.aboutInfoContent {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.aboutAppText{
+    font-size: 20px;
+    
+}
+.aboutAppText p{
+    padding:0px;
+}
+.setUpText {
+    background-color:#8ab1da;
+    padding:10px;
+    text-align: left;
+    margin:15px;
+    margin-bottom:5px;
+    font-size: 22px;
+}
+.setUpAppText {
+    background-color:#306193;
+    padding:10px;
+    text-align: left;
+    margin:15px;
+    margin-bottom:5px;
+    font-size: 22px;
+    color:white;
+}
+.helpText{
+    font-size: 25px;
 }

@@ -1,7 +1,7 @@
 const AdditionalStuff = () => {
     return (
         <div className = "additionalStuff">
-            <p>Additional Stuff</p>
+            <p>Personalised weather predictions</p>
         </div>
     )
 }

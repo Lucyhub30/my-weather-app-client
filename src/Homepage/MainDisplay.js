@@ -52,7 +52,7 @@ const MainDisplay = () => {
                     { message?.weatherData?.slice(0, 1).map((item, idx) => {
                         return (
                             <div key={idx} className="temperature">
-                                <div>
+                                <div className="innerTemp">
                                     {item.temp}°
                                 </div>
                                 

@@ -56,7 +56,7 @@ const HistoryPage = () => {
                                 <div className="timestamp readings">
                                     <div className="timestamp-container">
                                         <div>{new Date(item.timestamp*1000).toDateString()}</div>
-                                        <br></br>
+                                        <br/>
                                         <div>{new Date(item.timestamp*1000).toTimeString()}</div>
                                     </div>
                                 </div>
