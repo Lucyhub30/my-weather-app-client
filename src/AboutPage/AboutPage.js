@@ -53,7 +53,7 @@ const AboutPage = () => {
                 
                 <div className="aboutText"><p>This app collects and displays data collected directly by your weather station. </p>
                 <p>The main display on the home screen includes temperature, humidity, air pressure, estimated altitude, dust concentration, light and sound readings from your local environment.</p>
-                <p >Visit the <a className="pageLink"onClick={() => {window.location.pathname = "/"}}>user intstructions</a> page for more information on how to set up your weather station.</p></div>
+                </div>
                 <div className="aboutInfo">
                     <div className="aboutInfoContent" ><div className="aboutLog"><p>Connection Status - <b>{connection_status}</b></p> </div></div>
                     <div className="aboutInfoContent" ><div className="aboutLog"><p>Weather data last recieved - <b>{message?.weatherData?.slice(0,1).map((item, idx)=>{

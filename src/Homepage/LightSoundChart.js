@@ -82,7 +82,7 @@ const LightSoundChart = () => {
         scales: {
             y:{
                 min: 0,
-                max: 3600
+                max: 2500
             }
         }
     }
