@@ -6,30 +6,46 @@ const MainDisplay = () => {
     const title = "Your Weather Station";
     
     
-    var weatherConditions = "Sunny"
+   
     
     async function update(){
         await fetch("http://localhost:8000/weatherData")  
         .then(async (res) => { 
         const data = await res.json();
         setMessage(data);
+
+        //Get current weather conditions
+        async function getConditions(){
+            let response = await fetch("http://api.weatherapi.com/v1/current.json?key=915eec29b4cf4596810115908230209&q=Cirencester&aqi=no")
+            let edit_response = await response.json()
+            return edit_response
+            
+        }
+        
+        var edit_response = getConditions().then(function(edit_response){
+            let weatherConditions = edit_response["current"]["condition"]["text"]
+            setCondition(weatherConditions)
+        
+    })
         
       })
     }
     //Connects to backend
     const [message, setMessage] = useState(""); 
+    const [weatherConditions, setCondition] = useState(""); 
+    
     
         
     useEffect(() => {
         update()
         const interval = setInterval(()=>{
             update()
-        },30000)
+        },60000)
         return()=>clearInterval(interval)
     }, [])
 
 
-
+    
     return(
         <div className="mainDisplay">
             

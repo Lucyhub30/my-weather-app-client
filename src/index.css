@@ -72,6 +72,9 @@
         align-items: center;
         justify-content: center;
     }
+    .graphContentPredictions{
+        width: 600px;
+    }
     
 }
 
@@ -143,6 +146,9 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
     }
+    .graphContentPredictions{
+        width: 600px;
+    }
     
 }
 
@@ -204,6 +210,9 @@
         width: 370px;
         height: 250px;
     }
+    .graphContentPredictions{
+        width: 400px;
+    }
     
 }
 
@@ -259,6 +268,9 @@
     .dustContent{
         width: 300px;
         height: 300px;
+    }
+    .graphContentPredictions{
+        width: 350px;
     }
     
 }
@@ -452,7 +464,7 @@ body {
     background-color: #8ab1da;
     text-align: center;
     font-size: 30px;
-    padding-bottom: 300px;
+    padding-bottom: 20px;
     margin-bottom: 10px;
     padding-top: 20px;
 }
@@ -722,7 +734,7 @@ ul {
 }
 .lightSoundGraph{
     margin-top: 10px;
-    background-color: #f5f8f9;
+    background-color: #f0f6fc;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -781,4 +793,39 @@ ul {
 }
 .helpText{
     font-size: 25px;
+}
+.weatherPredictionsText {
+    color: #f5f8f9
+}
+
+.dataPredictionsContent {
+    padding: 0px;
+    display:grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-gap: 10px;
+}
+.dataPredictions {
+    font-size: 22px;
+}
+.columnTitles {
+    color : white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+.predictionGraphContent{
+    background-color: #f5f8f9;
+    padding:20px;
+    margin-top: 10px;
+    margin-bottom:10px;
+    display: flex;
+    align-items: centre;
+    justify-content: center;
+    
+}
+.predictionsGraph{
+    background-color: #f5f8f9;
+    height:320px
+    
 }

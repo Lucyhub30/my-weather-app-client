@@ -2,7 +2,7 @@ import MainDisplay from './MainDisplay';
 import AirQuality from './AirQuality';
 import WeatherPredictions from './WeatherPredictions';
 import TempGraph from './TempGraph';
-import AdditionalStuff from './AdditionalStuff';
+import PersonalisedPredictions from './PersonalisedPredictions';
 import DustConc from './DustConc';
 import Humidity from './Humidity';
 import Pressure from './Pressure';
@@ -38,7 +38,7 @@ const Home = () => {
                         <HumidityGraph/>
                         
                         </div>
-                        <AdditionalStuff/>
+                        <PersonalisedPredictions/>
                         
 
                         
