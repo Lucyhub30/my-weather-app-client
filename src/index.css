@@ -24,6 +24,7 @@
         margin: auto;
         max-width: 5000px;
         border-radius: 30px;
+        padding:5px;
     }
 
     .mainDisplay{
@@ -93,10 +94,8 @@
         max-width: 200px;
         border-radius: 30px;
         margin:auto;
-        padding-top: 1px;
-        padding-bottom: 1px;
+        padding: 5px;
     }
-    
     .weatherPredictions{
         margin-top: 0px;
     }
@@ -205,6 +204,7 @@
     }
     .weatherConditions{
         width: 15px;
+        padding:5px;
     }
     .lightSoundgraphData {
         width: 370px;
@@ -223,6 +223,7 @@
     .weatherConditions{
         width: 15px;
         border-radius: 30px;
+        padding:5px;
     }
     .graphData{
         height: 300px;
@@ -809,7 +810,7 @@ ul {
 }
 .columnTitles {
     color : white;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -828,4 +829,7 @@ ul {
     background-color: #f5f8f9;
     height:320px
     
+}
+.aboutDiv {
+    padding: 10px;
 }

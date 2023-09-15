@@ -56,21 +56,21 @@ const AboutPage = () => {
                 </div>
                 <div className="aboutInfo">
                     <div className="aboutInfoContent" ><div className="aboutLog"><p>Connection Status - <b>{connection_status}</b></p> </div></div>
-                    <div className="aboutInfoContent" ><div className="aboutLog"><p>Weather data last recieved - <b>{message?.weatherData?.slice(0,1).map((item, idx)=>{
+                    <div className="aboutInfoContent" ><div className="aboutLog"><div className="aboutDiv">Weather data last recieved - <b>{message?.weatherData?.slice(0,1).map((item, idx)=>{
                         return (
                             <div key={idx} > 
                                 {new Date(item.timestamp*1000).toLocaleDateString()}&nbsp;at&nbsp;{new Date(item.timestamp*1000).toLocaleTimeString()}
                             </div>
                         )
-                    })}</b></p> 
+                    })}</b></div> 
                     </div></div>
-                    <div className="aboutInfoContent" ><div className="aboutLog"><p>Weather station first activated - <b>{message?.weatherData?.reverse().slice(0,1).map((item, idx)=>{
+                    <div className="aboutInfoContent" ><div className="aboutLog"><div className="aboutDiv">Weather station first activated - <b>{message?.weatherData?.reverse().slice(0,1).map((item, idx)=>{
                         return (
                             <div key={idx} > 
                                 {new Date(item.timestamp*1000).toLocaleDateString()}&nbsp;at&nbsp;{new Date(item.timestamp*1000).toLocaleTimeString()}
                             </div>
                         )
-                    })}</b></p> 
+                    })}</b></div> 
                     </div></div>
                     <p>The weather station is 'ACTIVE' if data has been recieved within 2 hours.</p>
                     <p>Having trouble setting up the weather station? </p>

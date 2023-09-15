@@ -170,15 +170,7 @@ const PersonalisedPredictions = () => {
     }
 
 
-    let averageTempToday = (minTemp+maxTemp)/2;
-    let averageTempPredicted = (predictedMaxTemp?.slice(9,10) + predictedMinTemp?.slice(9,10))/2;
-    let averageTempChange = averageTempPredicted - averageTempToday;
-    let percentageTempChange = (averageTempChange/averageTempToday)*100
 
-    console.log("Today's average temp: "+averageTempToday)
-    console.log("End of the week average temp: "+averageTempPredicted)
-    console.log("Average temp change: "+averageTempChange)
-    console.log("Percentage temp change: "+percentageTempChange)
     
     return (
         <div className = "predictionGraphContent">

@@ -30,11 +30,8 @@ const Light = () =>{
 
     
     return(
-        <div>
-            <div className="dataCircle"> {message?.weatherData?.slice(0, 1).map((item, idx) => {
-            return (
                 
-                <div>
+            <div>
             <div className="dataCircle"> {message?.weatherData?.slice(0, 1).map((item, idx) => {
             return (
                 
@@ -64,13 +61,9 @@ const Light = () =>{
                  
         </div>     
                 
-            )
-            })}
-            </div>
             
             
-            
-        </div>
+
         
        
     )
