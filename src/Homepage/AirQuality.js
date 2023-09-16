@@ -2,18 +2,24 @@
 import React, { useState, useEffect } from "react";
 //Import speedometer component
 import ReactSpeedometer from "react-d3-speedometer";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const AirQuality = () =>{
 
     // Fetches data from the backend on port 8000
     async function update(){
-        await fetch("http://localhost:8000/weatherData")  
-        .then(async (res) => { 
-        const data = await res.json();
-        setMessage(data);
-        
-      })
+        try{
+            await fetch("http://localhost:8000/weatherData")  
+            .then(async (res) => {
+            const data = await res.json();
+            setMessage(data)}) 
+        } catch(error){
+            console.warn(error)
+            
+        }
+
     }
 
     //Connects to backend
@@ -54,6 +60,7 @@ const AirQuality = () =>{
     
     return(
         <div>
+            
             <div className="airQuality"> {message?.weatherData?.slice(0, 1).map((item, idx) => {
             return (
                 

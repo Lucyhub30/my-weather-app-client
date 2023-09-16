@@ -24,12 +24,15 @@ const LightSoundChart = () => {
     
     // Fetches data from the backend on port 8000
     async function update(){
-        await fetch("http://localhost:8000/weatherData")  
-        .then(async (res) => { 
-        const data = await res.json();
-        setMessage(data);
-        
-      })
+        try{
+            await fetch("http://localhost:8000/weatherData")  
+            .then(async (res) => { 
+            const data = await res.json();
+            setMessage(data)})
+            
+        } catch(error){
+            console.warn(error)
+        }
     }
 
     //Connects to backend

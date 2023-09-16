@@ -27,19 +27,25 @@ const PersonalisedPredictions = () => {
     // Fetches data from the backend on port 8000
     async function update(){
         //Fetch weather predictions
-        await fetch("http://localhost:8000/predictions")  
-        .then(async (res) => { 
-            const data = await res.json();
-            setPredictions(data);
-        })
-        
+        try{
+            await fetch("http://localhost:8000/predictions")  
+            .then(async (res) => { 
+                const data = await res.json();
+                setPredictions(data);
+            })
+            
 
-        //Fetch historical weather data
-        await fetch("http://localhost:8000/weatherData")  
-        .then(async (res) => { 
-            const data = await res.json();
-            setMessage(data);
+            //Fetch historical weather data
+            await fetch("http://localhost:8000/weatherData")  
+            .then(async (res) => { 
+                const data = await res.json();
+                setMessage(data);
         })
+            
+        } catch(error){
+            console.warn(error)
+        }
+        
     }
 
     useEffect(() => {

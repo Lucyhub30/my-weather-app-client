@@ -1,16 +1,27 @@
 //Import useState and useEffect
 import React, { useState, useEffect } from "react";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const WeatherPredictions = () => {
     
 
     // Fetches data from the backend on port 8000
     async function update(){
-        await fetch("http://localhost:8000/predictions")  
-        .then(async (res) => { 
-        const data = await res.json();
-        setPredictions(data);
+        try{
+            await fetch("http://localhost:8000/predictions")  
+            .then(async (res) => { 
+            const data = await res.json();
+            setPredictions(data)})
+            
+        } catch(error){
+            console.warn(error)
+            const notifyPredictions = () => toast.warn("Insufficient data to make weather predictions");
+            notifyPredictions()
+        }
         
-      })
+
     }
 
     //Connects to backend

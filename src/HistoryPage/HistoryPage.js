@@ -1,15 +1,24 @@
 import React, { useState, useEffect } from "react";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const HistoryPage = () => {
     async function update(){
         
-        await fetch("http://localhost:8000/weatherData")  
-        .then(async (res) => { 
-        const data = await res.json();
-        setMessage(data);
+        try{
+            await fetch("http://localhost:8000/weatherData")  
+            .then(async (res) => { 
+            const data = await res.json();
+            setMessage(data)})
+            
+        } catch(error){
+            console.warn(error)
+            const notifyHistory = () => toast.error("Unable to retrieve weather history");
+            notifyHistory()
+        }
         
-      })
+      
     }
     //Connects to backend
     const [message, setMessage] = useState(""); 
@@ -27,6 +36,9 @@ const HistoryPage = () => {
     
     return(
         <div className="historyPage">
+            <ToastContainer
+                    autoClose={10000}
+                />
             <div className="pageContent">
                 <h1 className="historyTitle">Weather History</h1>
                 <div className="historyText">
