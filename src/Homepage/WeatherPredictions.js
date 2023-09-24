@@ -1,12 +1,12 @@
 //Import useState and useEffect
 import React, { useState, useEffect } from "react";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 const WeatherPredictions = () => {
     
-
     // Fetches data from the backend on port 8000
     async function update(){
         try{
@@ -28,8 +28,12 @@ const WeatherPredictions = () => {
     const [myPredictions, setPredictions] = useState(""); 
 
     useEffect(() => {
-        //Repeatedly calls the update() function at 30 second ```javascript
+        
+        //Repeatedly calls the update() function 
+        
+        
         update()
+        
         const interval = setInterval(()=>{
             update()
         },60000)

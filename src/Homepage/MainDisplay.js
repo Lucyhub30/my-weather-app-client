@@ -10,7 +10,7 @@ const MainDisplay = () => {
     const title = "Your Weather Station";
     
     
-   
+   var showData = true
     
     async function update(){
         
@@ -22,10 +22,22 @@ const MainDisplay = () => {
                     throw error
                 }
             const data = await res.json();
+            
+            if (data.weatherData.length == 0){
+                const notifyYourData = () => toast.info("Welcome to your weather station!");
+                const notifySetup = () => toast.info("Head over to the help page to start setting up your weather system! (The ? icon)");
+                showData = false
+                notifyYourData()
+                notifySetup()
+            } else{
+                showData = true
+            }
+            
+            
             setMessage(data)})
         } catch(error){
             console.warn(error)
-            const notifyWeatherData = () => toast.error("Unable to connect to server and retrieve weather data. Please restart the app and try again.");
+            const notifyWeatherData = () => toast.error("Unable to connect to server and retrieve weather data. Please restart the server and try again.");
             notifyWeatherData()
         }
         
@@ -41,19 +53,21 @@ const MainDisplay = () => {
                 return edit_response
             } catch(error){
                 console.warn(error)
-                const notifyConditions = () => toast.error("Unable to collect current weather conditions.");
+                const notifyConditions = () => toast.error("Unable to collect current weather conditions. Retrying in 30 seconds.");
                 notifyConditions()
             }
             
         }
+        if (showData){
+            var edit_response = getConditions().then(function(edit_response){
+                try{
+                let weatherConditions = edit_response["current"]["condition"]["text"]
+                setCondition(weatherConditions)
+                } catch(error){
+                    console.warn(error)
+                }})
+        }
         
-        var edit_response = getConditions().then(function(edit_response){
-            try{
-            let weatherConditions = edit_response["current"]["condition"]["text"]
-            setCondition(weatherConditions)
-            } catch(error){
-                console.warn(error)
-            }})
         
         
         

@@ -1,6 +1,6 @@
 //Import useState and useEffect
 import React, { useState, useEffect } from "react";
-
+import MainDisplay from "./MainDisplay";
 // Import required library to produce line graph
 import { Line } from 'react-chartjs-2';
 import {
@@ -23,7 +23,7 @@ ChartJS.register(
 )
 
 const PersonalisedPredictions = () => {
-
+    
     // Fetches data from the backend on port 8000
     async function update(){
         //Fetch weather predictions
@@ -50,7 +50,9 @@ const PersonalisedPredictions = () => {
 
     useEffect(() => {
         //Repeatedly calls the update() function at 30 second ```javascript
+        
         update()
+        
         const interval = setInterval(()=>{
             update()
         },60000)
