@@ -86,7 +86,7 @@ const DustGraph = () => {
         scales: {
             y:{
                 min: 0,
-                max: Math.max.apply(Math,dust) *1.2
+                max: Math.max.apply(Math,dust) > 0 ? Math.max.apply(Math,dust) *1.2 : 10
             }
         }
     }
